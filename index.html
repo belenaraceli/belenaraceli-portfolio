@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Portfolio - Belén Araceli</title>
+    <link rel="stylesheet" type="text/css" href="css/portfolio.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Open+Sans:wght@300&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/icon.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/730e4187c7.js" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div class="content">
+
+        <div class="header" id="home">
+            <nav>
+                <ul class="menu">
+                    <li class="inicio"><a href="#home"> <img src="assets/images/butterflynav.png"> </a></li> 
+                    <br>
+                    <li class="sobremi"><a href="#aboutme"> <img src="assets/images/butterflynav.png"> </a></li> 
+                    <br>
+                    <li class="proyectos"><a href="#projects"> <img src="assets/images/butterflynav.png"> </a></li> 
+                    <br>
+                    <li class="contacto"><a href="#contact"> <img src="assets/images/butterflynav.png"> </a></li> 
+                </ul>
+            </nav>
+
+            <div class="mobile-menu">
+                <ul>
+                    <a href="#home">Home</a>
+                    <a href="#aboutme">About Me</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </ul>
+            </div>
+
+            <h2>Front-end Web Developer</h2>
+            <h1>BELEN ARACELI</h1>
+        </div>
+
+        <div class="main">
+            <div class="about-me" id="aboutme">
+                <img src="assets/images/aboutme.png" align="left"> 
+                <h2>
+                    My name is Belen Araceli and i'm a front-end Web Developer with knowledge in Graphic Design, based in Buenos Aires, Argentina.
+                </h2>
+            </div>
+
+            <hr>
+            
+            <div class="projects" id="projects">
+                <video class="desk" autoplay muted loop>
+                    <source src="assets/videos/project1desk.mp4" type="video/mp4"> 
+                    <source src="assets/videos/project1desk.ogg" type="video/ogg"> 
+                    Tu navegador no soporta el formato de video
+                </video>
+                <video class="formobile" preload="auto" autoplay muted loop webkit-playsinline playsinline>
+                    <source src="assets/videos/deskformobile.m4v"> 
+                    <source src="assets/videos/deskformobile.webm" type="video/webm"> 
+                    <source src="assets/videos/deskformobile.ogv" type="video/ogg"> 
+                </video>
+                <p>The client had renewed his brand image...</p>
+
+                <video class="mobile" autoplay muted loop>
+                    <source src="assets/videos/project1mobile.mp4" type="video/mp4"> 
+                    <source src="assets/videos/movie.ogg" type="video/ogg"> 
+                    Tu navegador no soporta el formato de video
+                </video>
+                <video class="formobile" preload="auto" autoplay muted loop webkit-playsinline playsinline>
+                    <source src="assets/videos/mobile-formobile.m4v"> 
+                    <source src="assets/videos/mobile-formobile.webm" type="video/webm"> 
+                    <source src="assets/videos/mobile-formobile.ogv" type="video/ogg"> 
+                </video>
+                <p>The client wanted it to be accessible...</p>
+            </div>
+
+            <hr>
+
+            <div class="flex-container" id="contact">
+                <form class="form" action="https://formsubmit.co/primeranobelen3@gmail.com" method="POST">
+                    <div class="form__section">
+                        <input type="text" name="asunto" class="form__input" placeholder="Name">
+                    </div>
+                    <div class="form__section">
+                        <input type="email" name="email" class="form__input" placeholder="Email">
+                    </div>
+                    <div class="form__section">
+                        <textarea name="mensaje" class="form__input" placeholder="Message"></textarea>
+                    </div>
+                    <div class="form__section">
+                        <input type="submit" value="Send" class="form__input">
+                    </div>
+                    <input type="hidden" name="_next" value="https://belenaraceli.github.io/">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
+            </div>
+
+            <div class="contact">
+                <h1>Contact Me</h1>
+            </div>
+        </div>
+
+        <footer class="footer">© 2023 Belén Araceli</footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
