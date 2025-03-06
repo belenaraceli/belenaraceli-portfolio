@@ -1,23 +1,22 @@
 * {
-	font-family: 'Harmond', serif;
+	font-family: Harmond, serif;
 }
 
 @font-face {
-         font-family: 'Harmond';
+         font-family: Harmond;
          src: local('Harmond'), url('../assets/fonts/harmond-semiboldcondensed.woff2') format('woff2'),
          url('../assets/fonts/harmond-semiboldcondensed.woff') format('woff');
 }
 
 @font-face {
-         font-family: 'Dirtyline';
+         font-family: Dirtyline;
          src: local('Dirtyline'), url('../assets/fonts/dirtyline_36daysoftype.woff2') format('woff2'),
          url('../assets/fonts/dirtyline_36daysoftype.woff') format('woff');
 }
 
 .content {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
 }
 
 .header {
@@ -31,26 +30,26 @@
 
 
 .header h1 {
-	font-family: 'Dirtyline';
+	font-family: Dirtyline, sans-serif;
 	text-align: center;
 	margin: 0;
 	font-size: 100px;
 	font-weight: normal;
 	color: #c3b17c;
-	text-shadow: 0px 4px 4px rgba(0,0,0,0.9);
+	text-shadow: 0 4px 4px rgb(0 0 0 / 90%);
 }
 
 .header h2 {
 	padding-top: 230px;
-	font-family: 'Pinyon Script', cursive;
+	font-family: 'Pinyon Script', cursive, sans-serif;
 	text-align: center;
 	font-size: 30px;
 	font-weight: normal;
 	color: #cdbe92;
-	text-shadow: 0px 2px 2px rgba(0,0,0,1);
+	text-shadow: 0 2px 2px rgb(0 0 0 / 100%);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (width <= 800px) {
 	.header h1 {
 		font-size: 80px;
 	}
@@ -61,14 +60,14 @@
 }
 
 
-@media screen and (min-width: 800px) {
+@media screen and (width >= 800px) {
    .mobile-menu {
 	display: none;
    }
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (width <= 800px) {
 	nav {
 	display: none;
 	}
@@ -83,12 +82,12 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(0 0 0 / 50%);
     z-index: 99;
     }
 
     .mobile-menu ul a {
-    font-family: 'Harmond';
+    font-family: Harmond, sans-serif;
     color: #c3b17c;
     font-weight: bold;
     font-size: 22px;
@@ -112,7 +111,6 @@ nav {
 nav ul {
 	display: list-item;
 	list-style: none;
-	position: fixed;
 	margin-top: -20px;
     text-align: right;
     position: absolute;
@@ -121,154 +119,101 @@ nav ul {
 }
 
 nav li a {
-  font-family: 'Harmond';
+  font-family: Harmond, sans-serif;
   font-weight: bold;
   font-size: 50px;
   text-decoration: none;
   color: #c3b17c;
-  text-shadow: 0px 3px 3px rgba(0,0,0,0.7);
+  text-shadow: 0 3px 3px rgb(0 0 0 / 70%);
   height: 50px;
   width: 0;
 }
 
-.inicio img {
-	width: 50px;
-	margin-right: 15px;
+/* Imágenes para los enlaces */
+.inicio img,
+.sobremi img,
+.proyectos img,
+.contacto img {
+    width: 50px;
+    margin-right: 15px;
 }
 
-
-.inicio a::after {
-	content: '';
-	display: block;
-	font-weight: normal;
-	font-size: 50px;
-	text-decoration: none;
-	color: rgba(216, 201, 190,0);
-	background-color: rgba(0,0,0,0.5);
-	height: 50px;
+/* Menú: selectores ::after genéricos primero */
+.inicio a::after,
+.sobremi a::after,
+.proyectos a::after,
+.contacto a::after {
+    content: '';
+    display: block;
+    font-weight: normal;
+    font-size: 50px;
+    text-decoration: none;
+    color: rgb(216 201 190 / 0%);
+    background-color: rgb(0 0 0 / 50%);
+    height: 50px;
     width: 0;
     margin-top: -60px;
-	
 }
 
+/* Menú: selectores ::after específicos con :hover después */
 .inicio a:hover::after {
-	content: 'Home';
-	display: block;
-	font-weight: normal;
-	font-size: 50px;
-	text-decoration: none;
-	color: #c3b17c;
-	text-shadow: 0px 3px 3px rgba(0,0,0,0.7);
-	background-color: rgba(0,0,0,0.7);
-	height: 50px;
+    content: 'Home';
+    display: block;
+    font-weight: normal;
+    font-size: 50px;
+    text-decoration: none;
+    color: #c3b17c;
+    text-shadow: 0 3px 3px rgb(0 0 0 / 70%);
+    background-color: rgb(0 0 0 / 70%);
+    height: 50px;
     width: 115px;
-	transition: linear 0.6s;
-	padding-right: 70px;
-
-}
-
-
-.sobremi img {
-	width: 50px;
-	margin-right: 15px;
-}
-
-.sobremi a::after {
-	content: '';
-	display: block;
-	font-weight: normal;
-	font-size: 50px;
-	text-decoration: none;
-	color: rgba(216, 201, 190,0);
-	background-color: rgba(0,0,0,0.5);
-	height: 50px;
-    width: 0;
-    margin-top: -60px;
-	
+    transition: linear 0.6s;
+    padding-right: 70px;
 }
 
 .sobremi a:hover::after {
-	content: 'AboutMe';
-	display: block;
-	font-weight: normal;
-	font-size: 50px;
-	text-decoration: none;
-	color: #c3b17c;
-	text-shadow: 0px 3px 3px rgba(0,0,0,0.7);
-	background-color: rgba(0,0,0,0.7);
-	height: 50px;
+    content: 'AboutMe';
+    display: block;
+    font-weight: normal;
+    font-size: 50px;
+    text-decoration: none;
+    color: #c3b17c;
+    text-shadow: 0 3px 3px rgb(0 0 0 / 70%);
+    background-color: rgb(0 0 0 / 70%);
+    height: 50px;
     width: 175px;
-	transition: linear 0.6s;
-	padding-right: 78px;
-
-}
-
-.proyectos img {
-	width: 50px;
-	margin-right: 15px;
-}
-
-.proyectos a::after {
-	content: '';
-	display: block;
-	font-weight: normal;
-	font-size: 50px;
-	text-decoration: none;
-	color: rgba(216, 201, 190,0);
-	background-color: rgba(0,0,0,0.5);
-	height: 50px;
-    width: 0;
-    margin-top: -60px;
-	
+    transition: linear 0.6s;
+    padding-right: 78px;
 }
 
 .proyectos a:hover::after {
-	content: 'Projects';
-	display: block;
-	font-weight: normal;
-	font-size: 50px;
-	text-decoration: none;
-	color: #c3b17c;
-	text-shadow: 0px 3px 3px rgba(0,0,0,0.7);
-	background-color: rgba(0,0,0,0.7);
-	height: 50px;
+    content: 'Projects';
+    display: block;
+    font-weight: normal;
+    font-size: 50px;
+    text-decoration: none;
+    color: #c3b17c;
+    text-shadow: 0 3px 3px rgb(0 0 0 / 70%);
+    background-color: rgb(0 0 0 / 70%);
+    height: 50px;
     width: 145px;
-	transition: linear 0.6s;
-	padding-right: 68px;
-}
-
-.contacto img {
-	width: 50px;
-	margin-right: 15px;
-}
-
-.contacto a::after {
-	content: '';
-	display: block;
-	font-weight: normal;
-	font-size: 50px;
-	text-decoration: none;
-	color: rgba(216, 201, 190,0);
-	background-color: rgba(0,0,0,0.5);
-	height: 50px;
-    width: 0;
-    margin-top: -60px;
-	
+    transition: linear 0.6s;
+    padding-right: 68px;
 }
 
 .contacto a:hover::after {
-	content: 'Contact';
-	display: block;
-	font-weight: normal;
-	font-size: 50px;
-	text-decoration: none;
-	color: #c3b17c;
-	text-shadow: 0px 3px 3px rgba(0,0,0,0.7);
-	background-color: rgba(0,0,0,0.7);
-	height: 50px;
+    content: 'Contact';
+    display: block;
+    font-weight: normal;
+    font-size: 50px;
+    text-decoration: none;
+    color: #c3b17c;
+    text-shadow: 0 3px 3px rgb(0 0 0 / 70%);
+    background-color: rgb(0 0 0 / 70%);
+    height: 50px;
     width: 145px;
-	transition: linear 0.6s;
-	padding-right: 69px;
+    transition: linear 0.6s;
+    padding-right: 69px;
 }
 
 
@@ -279,8 +224,8 @@ nav li a {
 	margin: 0;
 	background-color: black;
 	flex-basis: 100%;
-	background-image: url(../assets/images/main.jpg);
-	background-position: contain;
+	background-image: url("../assets/images/main.jpg");
+	background-size: contain;
 }
 
 .about-me {
@@ -289,7 +234,7 @@ nav li a {
 }
 
 .about-me img {
-	align-items: left;
+	align-items: flex-start;
 	width: 250px;
 	margin: 20px;
 	padding-top: 15px;
@@ -300,7 +245,7 @@ nav li a {
     font-size: 50px;
     padding-top: 60px;
     line-height: 40px;
-    font-family: 'Harmond';
+    font-family: Harmond, sans-serif;
     color: #c3b17c;
     filter: drop-shadow(0 0 1px #000)
 	drop-shadow(1px 1px 0 #000)
@@ -308,7 +253,7 @@ nav li a {
     drop-shadow(1px -1px 0 #000);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (width <= 800px) {
 	.main {
 		padding: 0 10px;
 	}
@@ -332,8 +277,7 @@ nav li a {
 
 .projects {
 	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+	flex-flow: column wrap;
 	justify-content: center;
 }
 
@@ -352,7 +296,7 @@ nav li a {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (width <= 800px) {
 	.projects p {
 		font-size: 22px;
 		line-height: 0.8em;
@@ -365,7 +309,6 @@ nav li a {
 	display: flex;
 	justify-content: center;
 	max-width: 100%;
-	max-height: auto;
 	margin: 0 auto;
 }
 
@@ -377,11 +320,10 @@ nav li a {
 	display: flex;
 	justify-content: center;
 	max-width: 100%;
-	max-height: auto;
 	margin: 0 auto;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (width <= 800px) {
 	.desk {
 	display: none;
 	}
@@ -394,7 +336,6 @@ nav li a {
 	display: flex;
 	justify-content: center;
 	max-width: 100%;
-	max-height: auto;
 	margin: 0 auto;
 	}
 }
@@ -402,27 +343,22 @@ nav li a {
 hr {
 	border-color: #897436;
 	height: 2px;
-
+	margin-bottom: 15px;
 }
-
 
 .flex-container {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 15% 0;
-  background: rgba(137, 116, 54, 0.86);
-  padding: 140px 3px 10px 3px;
+  background: rgb(137 116 54 / 86%);
+  padding: 140px 3px 10px;
   border-top-left-radius: 200px;
   border-top-right-radius: 200px;
-  background-image: url(../assets/images/form.jpeg);
+  background-image: url("../assets/images/form.jpeg");
 }
 
-hr {
-	height: 2px;
-	border-color: white;
-	margin-bottom: 15px;
-}
+
 
 .form {
   width: 370px;
@@ -433,28 +369,28 @@ hr {
   font-size: 25px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (width <= 800px) {
 	.flex-container {
     margin: 0;
-    padding: 80px 3px 0px 3px;
+    padding: 80px 3px 0;
     border-top-left-radius: 200px;
     border-top-right-radius: 200px;
     width: 280px;
 	}
 }
 
-.form__input {
+.form-input {
        width: 100%;
        padding: 7px;
        margin: 6px 0;
        border: none;
        border-bottom: 3px solid white;
-       background: rgb(237.08, 222, 177.3, 0.6);
-       color: #000000;
+       background: rgb(237 222 177 / 60%);
+       color: #000;
        font-size: 20px;
 }
 
-.form__input:focus {
+.form-input:focus {
        background: #eaddb4;
        outline: none;
        border-bottom: 3px solid white;
@@ -507,7 +443,7 @@ textarea::placeholder {
 	font-style: italic;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (width <= 800px) {
 	.flex-container {
 		margin: 15% 0%;
 	}
